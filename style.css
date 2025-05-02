@@ -1,8 +1,27 @@
 div{
     border: 2px solid white;
-    padding: 20px;
     color:white;
-    margin:10px;
+    width:fit-content;
+    height: fit-content;
+    font-size: medium;
+    margin:3%;
+}
+
+.content,
+.images-container, 
+.birth-work-container, 
+.youth-death-container,
+.sources{
+    border:0px solid white;
+    padding: 0;
+    margin:0;
+}
+
+div h3,
+div h1,
+div p,
+img{
+    margin: 3%;
 }
 
 div p{
@@ -11,31 +30,137 @@ div p{
 
 body{
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     max-width: 1000px;
 }
 
-.title-container img{
-    width: 50%;
-    height: auto;
-}
-
 .title-container{
-    margin-left: auto;
-    margin-right: auto;
+    margin-left:auto;
+    margin-right:auto;
+    height: fit-content;
+    overflow:hidden;
+}
+.title-container img{
     height: auto;
-    margin-bottom: 300px;
+    width:25%;
+    padding-right:10px;
+}
+.title-container p{
+    text-align: left;
+    top:0;
+    text-transform: uppercase;
+}
+.title-container h3{
+    font-weight: bold;
 }
 
+.content{
+    text-align: justify;
+    overflow: hidden;
+
+    .quote-container{
+        clear:both;
+        margin:auto;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    .work-container {
+        img{
+            float:right;
+            width: 60%;
+            height: auto;
+            margin-left: 5px;
+        }
+    }
+
+    .images-container{
+        margin: auto;
+        width:100%;
+        height: auto;
+
+        .struja{
+            margin:1vw;
+            width:48.2%;
+            height: auto;
+        }
+
+        .transformator{
+            margin:1vw;
+            float:right;
+            width:45%;
+            height: auto;
+        }
+    }
+}
+
+.sources{
+    width:100%;
+    text-align: center;
+}
+
+footer{
+    bottom: 0;
+    margin-top:33vh;
+    text-align: center;
+    color:white;
+}
 
 @media (min-width:800px) {
     body {
         background-color: #5FA565;
     }
-
     .title-container{
-        width: 40%;
+        width:50%;
+        img{
+            float: left;
+        }
+    }
+    .content{
+        width: 100%;
+        .quote-container{
+            width: 50%;
+        }
+
+        .birth-work-container{
+            float:left;
+            width: 50%;
+        }
+
+        .youth-death-container {
+            float: right;
+            width: 50%;
+        }
+    }
+
+    .sources{
+        float:center;
+        .enciklopedija-container{
+            margin:1.4%;
+            width: 30%;
+            float:left;
+            clear:none;
+            h3{
+                padding:5%;
+            }
+        }
+        .wiki-container{
+            margin:1.4%;
+            width: 30%;
+            float:left;
+            clear:none;
+            h3{
+                padding:15%;
+            }
+        }
+        .memorial-container{
+            margin:1.4%;
+            width: 30%;
+            float:left;
+            clear:none;
+            h3{
+                padding:2%;
+            }
+        }
     }
 
 }
@@ -45,9 +170,100 @@ body{
     body {
         background-color: #3775E4;
     }
+    .title-container {
+        width: 93.5%;
+        margin: 10px auto;
+        
+        img {
+            float: right;
+        }
+    }
+    .content{
+        .images-container{
+            margin-top:2vh;
+            width: 93.5%;
+            .struja{
+                margin:auto;
+                width:48.2%;
+                height: auto;
+            }
+    
+            .transformator{
+                margin:auto;
+                float:right;
+                width:45%;
+                height: auto;
+            }
+        }
 
-    .title-container{
-        width: 50%;
+        .quote-container{
+            margin-left:auto;
+            margin-right:auto;
+            width: 93.5%;
+        }
+
+        .birth-work-container{
+            margin-left:auto;
+            margin-right:auto;
+            width: 100%;
+
+            .birth-container{
+                float:left;
+                width: 40%;
+            }
+            .work-container{
+                float:right;
+                width: 40%;
+                img{
+                    float:none;
+                    clear:none;
+                }
+            }
+        }
+        .youth-death-container {
+            clear:both;
+            margin-left:auto;
+            margin-right:auto;
+            width: 100%;
+
+            .youth-container{
+                float:left;
+                width: 40%;
+            }
+            .death-container{
+                float:right;
+                width: 40%;
+            }
+        }
+    }
+
+    .sources{
+        width:100%;
+
+        .enciklopedija-container{
+            width:45%;
+            float:left;
+            clear:none;
+            h3{
+                padding:5%;
+            }
+        }
+        .wiki-container{
+            width:41.8%;
+            float:right;
+            clear:none;
+            h3{
+                padding:15%;
+            }
+        }
+        .memorial-container{
+            width:45%;
+            float:left;
+            clear:both;
+            h3{
+                padding:2%;
+            }
+        }
     }
 
     @media (min-width: 699px) and (max-width: 799px) {
@@ -56,4 +272,3 @@ body{
         }
     }
 }
-
